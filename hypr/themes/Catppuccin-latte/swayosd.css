@@ -1,0 +1,61 @@
+/* ============================================
+   SwayOSD Custom Style - Rose Pine Theme
+   ============================================ */
+
+/* Ventana principal del OSD */
+window {
+    background: rgba(239, 241, 245, 0.95); /* Base Rose Pine */
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px solid rgb(230, 233, 239); /* Rose */
+}
+
+/* Contenedor del OSD */
+#osd {
+    background: rgba(239, 241, 245, 0.95);
+    padding: 0;
+}
+
+/* Barra de progreso */
+progressbar {
+    min-height: 6px;
+    border-radius: 8px;
+    background: rgba(76, 79, 105, 0.8); /* Overlay */
+    padding: 0;
+}
+
+/* Progreso lleno */
+progressbar progress {
+    background: linear-gradient(90deg, 
+        rgb(220, 138, 120) 0%,    /* Foam */
+        rgb(221, 120, 120) 100%,
+        rgba(248,85,82, 1.0) 150%   /* Rose */
+   /* Rose */
+    );
+    border-radius: 8px;
+    min-height: 12px;
+}
+
+/* Iconos */
+image {
+    padding: 8px;
+    color: rgb(76, 79, 105); /* Text */
+}
+
+/* Labels de texto */
+label {
+    color: rgb(76, 79, 105); /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* Cuando está en mute */
+.muted {
+    color: rgba(235, 111, 146, 1.0); /* Love (rojo) */
+}
+
+/* Caps Lock activo */
+.caps-on {
+    color: rgba(246, 193, 119, 1.0); /* Gold */
+}

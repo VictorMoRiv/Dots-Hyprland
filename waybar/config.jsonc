@@ -1,0 +1,160 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "custom/powermenu",
+        "hyprland/workspaces",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "mpris"
+    ],
+    "modules-right": [
+        "group/hardware"
+    ],
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "pulseaudio",
+            "backlight",
+            "battery",
+            "bluetooth",
+            "network",
+            "custom/weather",
+            "clock",
+            "custom/notification"
+        ]
+    },
+    "clock": {
+        "format": "  {:%I:%M %p  %d-%m-%Y}",
+        "on-click": "~/.config/hypr/scripts/calendario-rofi.sh"
+    },
+    "hyprland/workspaces": {
+        "workspace-taskbar": {
+            // Enable the workspace taskbar. Default: false
+            "enable": true,
+            // If true, the active/focused window will have an 'active' class. Could cause higher CPU usage due to more frequent redraws. Default: false
+            "update-active-window": true,
+            // Format of the windows in the taskbar. Default: "{icon}". Allowed variables: {icon}, {title}
+            "format": "{icon} {title:.20}",
+            // Icon size in pixels. Default: 16
+            "icon-size": 16,
+            // Either the name of an installed icon theme or an array of themes (ordered by priority). If not set, the default icon theme is used.
+            "icon-theme": "",
+            // Orientation of the taskbar ("horizontal" or "vertical"). Default: "horizontal".
+            "orientation": "horizontal",
+            // List of regexes. A window will NOT be shown if its window class or title match one or more items. Default: []
+            "ignore-list": [
+                "code",
+                "Firefox - .*"
+            ],
+            // Command to run when a window is clicked. Default: "" (switch to the workspace as usual). Allowed variables: {address}, {button}
+            "on-click-window": "/some/arbitrary/script {address} {button}"
+        }
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}%  {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "~/.config/hypr/scripts/sonido-rofi.sh",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{essid} ",
+        "on-click": "nmtui",
+        "max-length": 50
+    },
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}% ",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+    "custom/notification": {
+        "tooltip": true,
+        "format": "<span>{icon}</span>",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰪓"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "mpris": {
+        "format": "{player_icon}  {dynamic}",
+        "format-paused": "{status_icon}  {dynamic}",
+        "max-length": 50, // <--- Ajusta este número a tu gusto
+        "player-icons": {
+            "spotify": "",
+            "firefox":"",
+            "default": "🎵"
+
+        
+        },
+        "status-icons": {
+            "paused": " "
+        },
+        "dynamic-order":
+            ["title", "artist", "album"],
+        
+        
+    },
+    "bluetooth": {
+        "format": "",
+        "format-connected": "",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\t{device_alias}\n\n{num_connections} conectados",
+        "on-click": "blueman-manager"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 25,
+        "on-click": "activate"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "interval": 3600,
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "return-type": "json"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "󰖨"]
+    },
+    "custom/powermenu": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "~/.config/hypr/scripts/powermenu.sh"
+    }
+}

@@ -1,0 +1,23 @@
+/* Rosé Pine Dawn - Variantes de fondo y superficies */
+@define-color bg0 #faf4ed; /* Base (Fondo principal) */
+@define-color bg1 #fffaf3; /* Surface (Ligeramente más claro) */
+@define-color bg2 #f2e9e1; /* Overlay (Para widgets o flotantes) */
+@define-color bg3 #9893a5; /* Muted (Texto secundario o sutil) */
+@define-color bg4 #797593; /* Subtle (Bordes o separadores) */
+
+/* Colores de acento */
+@define-color red       #b4637a; /* Love */
+@define-color orange    #ea9d34; /* Gold (Naranja cálido) */
+@define-color yellow    #f6c177; /* Rose */
+@define-color green     #286983; /* Pine (Nota: Dawn usa tonos azulados/verdosos oscuros) */
+@define-color aqua      #56949f; /* Foam */
+@define-color blue      #286983; /* Pine (Azul profundo) */
+@define-color purple    #907aa9; /* Iris */
+
+/* Color de texto principal */
+@define-color fg #575279; /* Text */
+
+/* Escala de grises / Neutros */
+@define-color grey0 #cecacd; /* Highlight Low */
+@define-color grey1 #dfdad9; /* Highlight Med */
+@define-color grey2 #b4b0bf; /* Highlight High */

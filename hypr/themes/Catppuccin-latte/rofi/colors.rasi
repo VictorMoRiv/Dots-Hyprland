@@ -1,0 +1,12 @@
+* {
+    bg: #eff1f5;
+    bg-alt: #e6e9ef;
+    fg: #4c4f69;
+    fg-alt: #5c5f77;
+    
+    selected: #df8e1d;
+    active: #a6e3a1;
+    urgent: #f38ba8;
+    
+    border: #89b4fa;
+}

@@ -1,0 +1,57 @@
+
+window {
+    background: rgba(22,22,29,0.95); /* Base Rose Pine */
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px solid rgb(31,31,40) ; /* Rose */
+}
+
+/* Contenedor del OSD */
+#osd {
+    background: rgba(22,22,29,0.95);
+    padding: 0;
+}
+
+/* Barra de progreso */
+progressbar {
+    min-height: 6px;
+    border-radius: 8px;
+    background: rgba(200,192,147, 0.8); /* Overlay */
+    padding: 0;
+}
+
+/* Progreso lleno */
+progressbar progress {
+    background: linear-gradient(90deg, 
+        rgba(230,195,132, 1.0) 0%,    /* Foam */
+        rgba(192,163,110, 1.0) 100%,
+        rgba(248,85,82, 1.0) 150%   /* Rose */
+   /* Rose */
+    );
+    border-radius: 8px;
+    min-height: 12px;
+}
+
+/* Iconos */
+image {
+    padding: 8px;
+    color: rgb(200,192,147)  ; /* Text */
+}
+
+/* Labels de texto */
+label {
+    color: rgb(200,192,147) ; /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* Cuando está en mute */
+.muted {
+    color: rgba(235, 111, 146, 1.0); /* Love (rojo) */
+}
+
+/* Caps Lock activo */
+.caps-on {
+    color: rgba(246, 193, 119, 1.0); /* Gold */
+}

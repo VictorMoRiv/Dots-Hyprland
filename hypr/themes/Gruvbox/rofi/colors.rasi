@@ -1,0 +1,12 @@
+* {
+    bg:           #1d2021; /* Dark background */
+    bg-alt:       #3c3836; /* Lighter background */
+    fg:           #ebdbb2; /* Pale yellow text */
+    fg-alt:       #a89984; /* Gray text */
+    selected:     #fb4934; /* Gruvbox Yellow/Gold */
+    active:       #b8bb26; /* Gruvbox Green */
+    urgent:       #fb4934; /* Gruvbox Red */
+    border-color: #665c54; /* Medium gray for borders */
+
+    background-color: transparent;
+}

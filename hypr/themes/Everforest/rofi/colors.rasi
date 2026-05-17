@@ -1,0 +1,13 @@
+* {
+    /* El fondo Soft es más cálido y menos saturado */
+    bg:           #f2efdf; /* Background Soft */
+    bg-alt:       #e8e5d5; /* Background darker (Muted) */
+    fg:           #5c6a72; /* Dark grey-green text */
+    fg-alt:       #939f91; /* Muted grey-green */
+    selected:     #8da101; /* Everforest Green */
+    active:       #dfa000; /* Everforest Yellow */
+    urgent:       #f85552; /* Everforest Red */
+    border-color: #d3cbb5; /* Borde más suave para el estilo Soft */
+
+    background-color: transparent;
+}

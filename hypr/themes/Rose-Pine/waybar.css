@@ -1,0 +1,174 @@
+@import 'colors/rosepine.css';
+
+* {
+    border: none;
+    border-radius: 0;
+
+    font-family: 'Inter', 'CodeNewRoman Nerd Font Propo';
+    font-size: 13px;
+    font-weight: bold;
+
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: rgba(242, 233, 222, 0.85);
+    border: 1px solid @bg1;
+}
+
+tooltip {
+    background: @bg0;
+    border: 1px solid @bg3;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 6px;
+}
+
+#workspaces,
+#taskbar {
+    background-color: @bg0;
+    margin: 4px 0 4px 12px;
+    border-radius: 12px;
+    border: 1px solid @bg1;
+    color: @fg;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    margin: 3px 3px;
+    border-radius: 50px;
+    color: @fg;
+    background-color: @bg1;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background: #EA9A97;
+    background: #d7827e;
+    color: @bg0;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+    font-size: 13px;
+}
+
+#workspaces button:hover {
+    background-color: @purple;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 16px;
+    background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+    background-color: @orange;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification,
+#mpris,
+#bluetooth,
+#tray,
+#custom-weather,
+#backlight {
+    font-weight: bold; /* O incluso 100 si la fuente lo soporta */
+    background-color: @bg0;
+    padding: 5px 10px;
+    margin: 7 0 7 0px;
+    border-radius: 0px;
+    border: 0px solid @bg1;
+    font-size: 12px;
+
+}
+
+#clock {
+    color: @fg;
+    font-size: 14px;
+    font-weight: bold; /* O incluso 100 si la fuente lo soporta */
+
+}
+
+
+#tray {
+    border-radius: 10px 0 0 10px;
+    color:@red;
+}
+
+#custom-notification {
+    color: @fg;
+    margin: 7 12px 7 0px;
+    border-radius: 0 10px 10px 0;
+}
+
+#pulseaudio {
+    color: @orange;
+    font-weight: normal; /* O incluso 100 si la fuente lo soporta */
+
+}
+
+#network {
+    color: @blue;
+}
+
+#battery {
+    color: @green;
+}
+
+#mpris {
+    color: @fg;
+    border-radius: 12px
+}
+
+#bluetooth {
+    color: @aqua;
+}
+
+#taskbar button {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#taskbar button.active {
+    background-color: @purple;
+    border: 3px solid @purple;
+    border-radius: 10px
+}
+
+#taskbar button:hover {
+    background-color: @yellow;
+    border: 3px solid @yellow;
+    border-radius: 10px
+}
+
+#backlight {
+    color: @red;
+}
+
+
+
+#custom-powermenu {
+    color: @fg;
+    padding: 0 10px;
+    background-color: @bg0;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid @bg1;
+    margin: 7 0 7px
+}
+
+#custom-powermenu:hover {
+    color: @orange;
+    background-color: @bg1;
+
+}

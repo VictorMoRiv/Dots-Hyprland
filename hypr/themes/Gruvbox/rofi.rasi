@@ -1,0 +1,72 @@
+@import "~/.config/hypr/themes/Gruvbox/rofi/colors.rasi"
+
+window {
+    width:            600px;
+    background-color: @bg;
+    border:           0px;
+    border-color:     @selected;
+    border-radius:    15px;
+    padding:          20px;
+}
+
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    text-color:       @fg;
+    children:         [ prompt, entry ];
+    border-radius:    10px;
+    padding:          12px 15px;
+    margin:           0 0 15px 0;
+    border:           1px;
+    border-color:     @fg-alt;
+    spacing:          15px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @selected;
+    font:             "Inter","CodeNewRoman Nerd Font Bold";
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder:      "Escribe para buscar...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    lines:      8;
+    spacing:    8px;
+    scrollbar:  false;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @fg;
+    padding:          10px;
+    border-radius:    8px;
+}
+
+element selected {
+    background-color: @selected;
+    text-color:       @bg;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+element-icon {
+    size: 0px;       /* Reduce el tamaño a cero */
+    margin: 0px;     /* Elimina el espacio que ocupa */
+    padding: 0px;    /* Asegura que no haya relleno */
+    display: none;   /* Oculta el elemento completamente */
+}

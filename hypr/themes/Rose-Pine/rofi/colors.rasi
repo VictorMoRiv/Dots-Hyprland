@@ -1,0 +1,11 @@
+/* Rosé Pine Dawn Palette */
+* {
+    bg:          #faf4ed; /* Base */
+    bg-alt:      #fffaf3; /* Surface */
+    fg:          #575279; /* Text */
+    fg-alt:      #9893a5; /* Muted */
+    selected:    #d7827e; /* Iris */
+    active:      #d7827e; /* Rose */
+    urgent:      #b4637a; /* Love */
+    border:      #286983; /* Pine */
+}
