@@ -1,0 +1,91 @@
+* {
+    background-color:               #faf4ed;
+    background:                     #f2e9e1;
+    background-transparent:         #cc00ccff;
+    text-color:                     #575279;
+    text-color-selected:            #83A598FF;
+    primary:                        #d7827e;
+    important:                      #FB4934FF;
+}
+// Config //
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "JetBrainsMono Nerd Font 9";
+}
+
+// Main //
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       100%;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      0em;
+    border-radius:               0em;
+    border-color:                transparent;
+    background-color:            transparent;
+}
+mainbox {
+    enabled:                     true;
+    children:                    [ "listview" ];
+    background-color:            rgba(250, 244, 237,0.9);
+}
+
+
+// Lists //
+listview {
+    enabled:                     true;
+    columns:                     10;  // Set a reasonable number of columns
+    lines:                       1;  
+    spacing:                     1.9em;
+    padding:                     1em 3em; 
+    cycle:                       true;
+    dynamic:                     false;  // Keep dynamic layout disabled to prevent crashes
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               false;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+
+
+// Elements //
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    spacing:                     0em;
+    padding:                     1em;
+    border-radius:               0em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+element selected.normal {
+    background-color:            @background;
+    text-color:                  @primary;
+}
+element-icon {
+    size:                        10em;
+    spacing:                     0em;
+    padding:                     0em;
+    cursor:                      inherit;
+    border-radius:               0em;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    spacing:                     0em;
+    padding:                     0.625em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
